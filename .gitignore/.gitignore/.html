@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="basic.css">
+        <script type="text/javascript" src="play.js"> </script>
+    </head>
+    <body data-tid="App">
+        <input name="dzen" type="radio" id="first-list" checked class="first-screen">
+        <input name="dzen" type="radio" id="second-list" class="second-screen">
+        <input name="dzen" type="radio" id="third-list" class="third-screen">
+        <section class="first_screen">
+            <div class="picture">
+                <img src="karty2.png" alt="Письма мастера дзен">
+            </div>
+            <div class="text">
+                MEMORY GAME
+            </div>
+            <label for="second-list" class="paging right_arrow" title="next page" data-tid="NewGame-startGame">
+                <div class="radio"><span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Начать игру</span></div>
+            </label>
+        </section>
+        <section class="second_screen" data-tid="Deck">
+            <div id="line">
+            <div class="new_game"><a href="basic.html"  data-tid="Menu-newGame">Новая игра</a></div>
+            <div id="count" class="count_c" data-tid="Menu-scores">Очки: 0</div></div>
+            <div id="memory_board" data-tid="Card"></div>
+            <script>newBoard();</script>
+        </section>
+        <section class="third_screen">
+            <div class="picture">
+                <img src="card.png" alt="second picture" class="size">
+            </div>
+            <div class="text">
+                Поздравляем!<br>
+                <div>Ваш итоговый счёт:</div>
+                <div id="count_1" data-tid="Menu-scores">0</div>
+            </div>
+            <a href="basic.html">
+                <div class="button" data-tid="EndGame-retryGame">
+                    <form>
+                        <button>
+                            <span>
+                                Ещё раз
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </a>
+        </section>
+    </body>
+</html>
